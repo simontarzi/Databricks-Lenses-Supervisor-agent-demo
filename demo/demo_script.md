@@ -1,6 +1,6 @@
-# The demo — 5 rounds
+# The demo — 4 rounds
 
-Reordered as grounded → fresh → multi-hop → topic audit → action. Have prompts ready to paste; don't type them live. Re-run the Kafka loader shortly before the demo so the "last hour" window is fresh.
+Reordered as grounded → fresh → multi-hop → action. Have prompts ready to paste; don't type them live. Re-run the Kafka loader shortly before the demo so the "last hour" window is fresh.
 
 ## Round 1 — Grounded only (Genie)
 > "What's Acme Construction's credit limit, and how much have they ordered year to date?"
@@ -22,12 +22,7 @@ Then ask:
 
 Expect: the agent calls Lenses for last-hour orders, Genie for credit limits/balances, joins on `customer_id`, and flags orders from **C-001 (Acme)** and **C-008 (Donau Schrauben)**. Talk track: *"This is the part you can't do with a single tool — the supervisor picked the right source for each slice and joined them in its own reasoning. No Spark job, no glue code."* **Capture the tool-call decomposition + final answer (blog images).**
 
-## Round 4 — Topic audit (Lenses Kafka agent skill)
-> Run a topic-audit workflow on `orders-v2` (schema health, throughput, anomalies) using the Lenses Kafka agent skills.
-
-A defined, repeatable workflow rather than open-ended judgment.
-
-## Round 5 — Action close
+## Round 4 — Action close
 > "Draft a short email to the account manager for the highest-risk order you found."
 
 Expect: an email with the right customer, order detail, and risk reasoning. Segues into the governance story (private data + untrusted content + external action = the lethal trifecta; Lenses RBAC/PII/audit on Kafka, Unity Catalog on Delta).

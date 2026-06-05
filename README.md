@@ -22,7 +22,7 @@ The payoff is a multi-hop question that needs both at once — e.g. *"of the ord
 | [`data/load_kafka.sh`](data/load_kafka.sh) | Example: create the topic + produce the events |
 | [`genie/genie_space_config.md`](genie/genie_space_config.md) | Genie space: tables, sample questions, instructions, expected answers |
 | [`agent/system_prompt.md`](agent/system_prompt.md) | Supervisor system prompt — routing rules for both tools |
-| [`demo/demo_script.md`](demo/demo_script.md) | The 5-round demo + talk track + the live "wow" order |
+| [`demo/demo_script.md`](demo/demo_script.md) | The 4-round demo + talk track + the live "wow" order |
 | [`diagrams/supervisor_architecture.png`](diagrams/supervisor_architecture.png) | The architecture diagram above |
 
 ---
@@ -73,7 +73,7 @@ In **one** session, attach the **Genie space** *and* the **Lenses MCP** connecti
 Paste it into the Playground system-prompt field and **set your `<LENSES_ENVIRONMENT>` name** — Lenses MCP tools require an `environment` parameter; the wrong value returns `404 Environment not found`.
 
 ### 6. Run the demo → [`demo/demo_script.md`](demo/demo_script.md)
-Five rounds: grounded → fresh → multi-hop → topic audit → action, with the live "wow" order and talk track.
+Four rounds: grounded → fresh → multi-hop → action, with the live "wow" order and talk track.
 
 ---
 
